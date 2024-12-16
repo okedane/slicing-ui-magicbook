@@ -1,4 +1,4 @@
-import 'package:magic_book/state_util.dart';
+import 'package:magic_book/core/theme/theme_config.dart';
 import 'package:magic_book/core.dart';
 import 'package:flutter/material.dart';
 
@@ -12,9 +12,15 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      theme: ThemeData(
+        scaffoldBackgroundColor: const Color(0xFFF4F6F6),
+        textTheme: TextTheme(
+          titleMedium: TextStyle(color: mainTextColor),
+        ),
+      ),
       debugShowCheckedModeBanner: false,
-      home: LoginView(),
+      home: const SplashView(),
     );
   }
 }

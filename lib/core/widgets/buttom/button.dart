@@ -5,10 +5,12 @@ class QButton extends StatelessWidget {
   final String label;
   final Function onPressed;
   final Color? color;
+  final Color? textColor;
   const QButton({
     required this.label,
     required this.onPressed,
     this.color,
+    this.textColor,
     super.key,
   });
 
@@ -27,8 +29,9 @@ class QButton extends StatelessWidget {
         onPressed: () => onPressed(),
         child: Text(
           label,
-          style: const TextStyle(
-            color: Colors.white,
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: textColor ?? secondaryColor,
           ),
         ),
       ),

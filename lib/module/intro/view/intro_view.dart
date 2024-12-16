@@ -2,7 +2,6 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:magic_book/core.dart';
 import 'package:magic_book/core/widgets/buttom/button.dart';
-import '../controller/intro_controller.dart';
 
 class IntroView extends StatefulWidget {
   const IntroView({super.key});
@@ -106,7 +105,7 @@ class IntroView extends StatefulWidget {
                 label: "Next",
                 onPressed: () => Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => LoginView()),
+                  MaterialPageRoute(builder: (context) => const LoginView()),
                 ),
               )
             ],

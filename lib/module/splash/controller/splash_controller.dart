@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:magic_book/core.dart';
-import '../view/splash_view.dart';
 
 class SplashController extends State<SplashView> {
   static late SplashController instance;

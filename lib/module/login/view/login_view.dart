@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:magic_book/core.dart';
+import 'package:magic_book/core/theme/theme_config.dart';
 import 'package:magic_book/core/widgets/buttom/button.dart';
 import '../controller/login_controller.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -10,10 +11,12 @@ class LoginView extends StatefulWidget {
   Widget build(context, LoginController controller) {
     controller.view = this;
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
                 children: [
@@ -22,13 +25,19 @@ class LoginView extends StatefulWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Welocome \nto MagicBook",
+                          "Welcome \nto MagicBook",
                           style: GoogleFonts.roboto(
                             fontWeight: FontWeight.bold,
+                            color: mainTextColor,
                             fontSize: 30,
                           ),
                         ),
-                        Text("Write less do more"),
+                        Text(
+                          "Write less do more",
+                          style: TextStyle(
+                            color: mainTextColor,
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -43,22 +52,24 @@ class LoginView extends StatefulWidget {
               const Spacer(),
               TextField(
                 autocorrect: false,
+                onChanged: (value) {},
                 decoration: InputDecoration(
                   hintText: "Email",
-                  hintStyle: const TextStyle(color: Color(0xFF969FA2)),
+                  hintStyle: TextStyle(color: hintTextColor),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(6.0),
                   ),
                   enabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(color: Color(0xFFCDCDCD)),
+                    borderSide: BorderSide(color: backgroundTextFieldcolor),
                     borderRadius: BorderRadius.circular(6.0),
                   ),
                   focusedBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                        color: Color(0xFFCDCDCD)), // Warna border saat fokus
+                    borderSide: BorderSide(
+                      color: backgroundTextFieldcolor,
+                    ),
                     borderRadius: BorderRadius.circular(6.0),
                   ),
-                  fillColor: const Color(0xFFCDCDCD),
+                  fillColor: backgroundTextFieldcolor,
                   filled: true,
                 ),
               ),
@@ -67,34 +78,47 @@ class LoginView extends StatefulWidget {
               ),
               TextField(
                 autocorrect: false,
+                obscureText: true,
+                onChanged: (value) {},
                 decoration: InputDecoration(
-                  hintText: "Password",
-                  hintStyle: const TextStyle(color: Color(0xFF969FA2)),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(6.0),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(color: Color(0xFFCDCDCD)),
-                    borderRadius: BorderRadius.circular(6.0),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                        color: Color(0xFFCDCDCD)), // Warna border saat fokus
-                    borderRadius: BorderRadius.circular(6.0),
-                  ),
-                  fillColor: const Color(0xFFCDCDCD),
-                  filled: true,
+                    hintText: "Password",
+                    hintStyle: TextStyle(color: hintTextColor),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(6.0),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: backgroundTextFieldcolor),
+                      borderRadius: BorderRadius.circular(6.0),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: backgroundTextFieldcolor,
+                      ),
+                      borderRadius: BorderRadius.circular(6.0),
+                    ),
+                    fillColor: backgroundTextFieldcolor,
+                    filled: true,
+                    suffixIcon: Icon(
+                      Icons.visibility,
+                      color: hintTextColor,
+                    )),
+              ),
+              const SizedBox(height: 15.0),
+              QButton(label: "Login", onPressed: () {}),
+              const SizedBox(height: 15),
+              Text(
+                "Fogot password?",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: primaryColor,
                 ),
               ),
-              const SizedBox(
-                height: 13.0,
-              ),
-              QButton(label: "Login", onPressed: () {}),
               const Spacer(),
               QButton(
                 label: "Sign Up",
                 onPressed: () {},
-                color: Color(0xFFCDCDCD),
+                color: const Color(0xFFCDCDCD),
+                textColor: mainTextColor,
               ),
             ],
           ),
