@@ -50,7 +50,7 @@ class IntroView extends StatefulWidget {
                                   margin: const EdgeInsets.symmetric(
                                       horizontal: 5.0),
                                   decoration: BoxDecoration(
-                                    color: Colors.amber,
+                                    color: Colors.grey,
                                     borderRadius: const BorderRadius.all(
                                       Radius.circular(6.0),
                                     ),
