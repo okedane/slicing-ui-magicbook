@@ -105,13 +105,18 @@ class LoginView extends StatefulWidget {
                     )),
               ),
               const SizedBox(height: 15.0),
-              QButton(label: "Login", onPressed: () {}),
+              QButton(
+                  label: "Login",
+                  onPressed: () => Get.offAll(const MainNavigationView())),
               const SizedBox(height: 15),
-              Text(
-                "Fogot password?",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: primaryColor,
+              InkWell(
+                onTap: () => Get.to(const ForgotPasswordView()),
+                child: Text(
+                  "Fogot password?",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: primaryColor,
+                  ),
                 ),
               ),
               const Spacer(),

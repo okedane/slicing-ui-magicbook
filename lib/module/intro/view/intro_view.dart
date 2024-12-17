@@ -34,7 +34,7 @@ class IntroView extends StatefulWidget {
                           carouselController:
                               controller.CarouselSliderController,
                           options: CarouselOptions(
-                            height: MediaQuery.of(context).size.height * 0.8,
+                            height: MediaQuery.of(context).size.height * 0.78,
                             autoPlay: true,
                             enlargeCenterPage: true,
                             onPageChanged: (index, reason) {

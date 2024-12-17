@@ -12,9 +12,20 @@ class ForgotPasswordView extends StatefulWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        leading: Container(),
+        leadingWidth: 0.0,
         title: const Text("Forgot Password"),
-        backgroundColor: Colors.white,
-        actions: const [],
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(
+              Icons.close,
+              color: primaryColor,
+            ),
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Container(

@@ -34,83 +34,84 @@ class RegisterView extends StatefulWidget {
             ),
           ),
         ],
-        backgroundColor: Colors.white,
         leading: Container(),
         leadingWidth: 0.0,
       ),
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.only(
-            top: 70,
-            bottom: 20,
-            left: 20,
-            right: 20,
-          ),
-          child: Column(
-            children: [
-              Image.asset(
-                "assets/icon/icon.png",
-                width: 120.0,
-                height: 120.0,
-                fit: BoxFit.fill,
-                alignment: Alignment.center,
-              ),
-              const SizedBox(
-                height: 30.0,
-              ),
-              const QTextfild(hintText: "Full name"),
-              const SizedBox(
-                height: 10.0,
-              ),
-              const QTextfild(hintText: "Email"),
-              const SizedBox(
-                height: 10.0,
-              ),
-              const QTextfild(hintText: "Password"),
-              const SizedBox(
-                height: 15.0,
-              ),
-              QButton(label: "Create an Account", onPressed: () {}),
-              const SizedBox(
-                height: 10.0,
-              ),
-              RichText(
-                textAlign: TextAlign.center,
-                text: TextSpan(
-                  text: '',
-                  style: const TextStyle(),
-                  children: <TextSpan>[
-                    TextSpan(
-                      text: 'By signing up, you agree to our \n',
-                      style: TextStyle(color: hintTextColor),
-                    ),
-                    TextSpan(
-                      text: 'Terms',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: primaryColor,
-                      ),
-                      recognizer: TapGestureRecognizer()..onTap = () {},
-                    ),
-                    TextSpan(
-                      text: ' and ',
-                      style: TextStyle(
-                        color: hintTextColor,
-                      ),
-                      recognizer: TapGestureRecognizer()..onTap = () {},
-                    ),
-                    TextSpan(
-                      text: 'Privacy',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: primaryColor,
-                      ),
-                      recognizer: TapGestureRecognizer()..onTap = () {},
-                    ),
-                  ],
+      body: SingleChildScrollView(
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.only(
+              top: 70,
+              bottom: 20,
+              left: 20,
+              right: 20,
+            ),
+            child: Column(
+              children: [
+                Image.asset(
+                  "assets/icon/icon.png",
+                  width: 120.0,
+                  height: 120.0,
+                  fit: BoxFit.fill,
+                  alignment: Alignment.center,
                 ),
-              ),
-            ],
+                const SizedBox(
+                  height: 30.0,
+                ),
+                const QTextfild(hintText: "Full name"),
+                const SizedBox(
+                  height: 10.0,
+                ),
+                const QTextfild(hintText: "Email"),
+                const SizedBox(
+                  height: 10.0,
+                ),
+                const QTextfild(hintText: "Password"),
+                const SizedBox(
+                  height: 15.0,
+                ),
+                QButton(label: "Create an Account", onPressed: () {}),
+                const SizedBox(
+                  height: 10.0,
+                ),
+                RichText(
+                  textAlign: TextAlign.center,
+                  text: TextSpan(
+                    text: '',
+                    style: const TextStyle(),
+                    children: <TextSpan>[
+                      TextSpan(
+                        text: 'By signing up, you agree to our \n',
+                        style: TextStyle(color: hintTextColor),
+                      ),
+                      TextSpan(
+                        text: 'Terms',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: primaryColor,
+                        ),
+                        recognizer: TapGestureRecognizer()..onTap = () {},
+                      ),
+                      TextSpan(
+                        text: ' and ',
+                        style: TextStyle(
+                          color: hintTextColor,
+                        ),
+                        recognizer: TapGestureRecognizer()..onTap = () {},
+                      ),
+                      TextSpan(
+                        text: 'Privacy',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: primaryColor,
+                        ),
+                        recognizer: TapGestureRecognizer()..onTap = () {},
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),

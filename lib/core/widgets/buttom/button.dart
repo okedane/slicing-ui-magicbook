@@ -18,7 +18,7 @@ class QButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: MediaQuery.of(context).size.width,
-      height: 42,
+      height: 48,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           backgroundColor: color ?? primaryColor,

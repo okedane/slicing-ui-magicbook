@@ -15,8 +15,21 @@ class ChangePasswordView extends StatefulWidget {
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.all(20.0),
-          child: const Column(
-            children: [],
+          child: Column(
+            children: [
+              const QTextfild(hintText: "Email"),
+              const SizedBox(
+                height: 15.0,
+              ),
+              const QTextfild(hintText: "Password"),
+              const SizedBox(
+                height: 15.0,
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              QButton(label: "Password", onPressed: () {}),
+            ],
           ),
         ),
       ),

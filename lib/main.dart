@@ -1,3 +1,5 @@
+import 'package:google_fonts/google_fonts.dart';
+import 'package:magic_book/state_util.dart';
 import 'package:magic_book/core/theme/theme_config.dart';
 import 'package:magic_book/core.dart';
 import 'package:flutter/material.dart';
@@ -13,10 +15,21 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      navigatorKey: Get.navigatorKey,
       theme: ThemeData(
-        scaffoldBackgroundColor: const Color(0xFFF4F6F6),
+        scaffoldBackgroundColor: Colors.white,
         textTheme: TextTheme(
           titleMedium: TextStyle(color: mainTextColor),
+        ),
+        appBarTheme: AppBarTheme(
+          color: Colors.white,
+          centerTitle: true,
+          foregroundColor: mainTextColor,
+          titleTextStyle: GoogleFonts.roboto(
+            fontWeight: FontWeight.bold,
+            color: mainTextColor,
+            fontSize: 16,
+          ),
         ),
       ),
       debugShowCheckedModeBanner: false,
