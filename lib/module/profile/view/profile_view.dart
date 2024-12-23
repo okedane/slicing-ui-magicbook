@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:magic_book/core.dart';
+import 'package:magic_book/core/widgets/listtile/listtile.dart';
 import '../controller/profile_controller.dart';
 
 class ProfileView extends StatefulWidget {
@@ -14,17 +15,45 @@ class ProfileView extends StatefulWidget {
       ),
       body: SingleChildScrollView(
         child: Container(
+          width: MediaQuery.of(context).size.width,
           padding: const EdgeInsets.all(20.0),
           child: Column(
             children: [
-              ListTile(
-                title: const Text("change Password"),
-                trailing: const Icon(
-                  Icons.chevron_right,
-                  size: 24.0,
+              const CircleAvatar(
+                radius: 64,
+                backgroundImage: NetworkImage(
+                  "https://res.cloudinary.com/dotz74j1p/raw/upload/v1716044979/nr7gt66alfhmu9vaxu2u.png",
                 ),
-                onTap: () => Get.to(ChangePasswordView()),
               ),
+              const SizedBox(
+                height: 12.0,
+              ),
+              const Text(
+                "Jose Spancer",
+                style: TextStyle(
+                  fontSize: 24.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const Text(
+                "Desainer at KK UI Store",
+                style: TextStyle(fontSize: 14),
+              ),
+              const ListTile(
+                contentPadding: EdgeInsets.zero,
+                title: Text("OTHER INFORMATION"),
+              ),
+              //bisa mengunakan ListView
+              for (var item in controller.menuItem)
+                ListTile(
+                  contentPadding: EdgeInsets.zero,
+                  title: Text(item["label"]),
+                  trailing: const Icon(
+                    Icons.chevron_right,
+                    size: 24.0,
+                  ),
+                  onTap: () => Get.to(item["view"]),
+                )
             ],
           ),
         ),
