@@ -22,4 +22,39 @@ class ProfileController extends State<ProfileView> {
 
   @override
   Widget build(BuildContext context) => widget.build(context, this);
+
+  List menuItem = [
+    {
+      "label": "Edit Profile",
+      "view": const EditProfileView(),
+    },
+    {
+      "label": "Change Password",
+      "view": const ChangePasswordView(),
+    },
+    {
+      "label": "Setting",
+      "view": const EditProfileView(),
+    },
+    {
+      "label": "Help",
+      "view": const EditProfileView(),
+    },
+    {
+      "label": "FAQ",
+      "view": const EditProfileView(),
+    },
+    {
+      "label": "Privacy Policy",
+      "view": const EditProfileView(),
+    },
+    {
+      "label": "TOS",
+      "view": const EditProfileView(),
+    },
+    {
+      "label": "logout",
+      "view": () {},
+    }
+  ];
 }
