@@ -26,9 +26,21 @@ class DashboardView extends StatefulWidget {
               style: TextStyle(
                 fontSize: 16.0,
               ),
-            ),
+            )
           ],
         ),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: InkWell(
+              onTap: () => Get.to(CartView()),
+              child: const Badge(
+                label: Text("4"),
+                child: Icon(Icons.shopping_cart),
+              ),
+            ),
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -55,7 +67,7 @@ class DashboardView extends StatefulWidget {
                         width: MediaQuery.of(context).size.width,
                         margin: const EdgeInsets.symmetric(horizontal: 5.0),
                         decoration: BoxDecoration(
-                          color: Colors.amber,
+                          color: Colors.grey,
                           borderRadius: const BorderRadius.all(
                             Radius.circular(6.0),
                           ),

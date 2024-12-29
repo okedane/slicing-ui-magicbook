@@ -17,23 +17,31 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       navigatorKey: Get.navigatorKey,
       theme: ThemeData(
-        scaffoldBackgroundColor: Colors.white,
-        textTheme: TextTheme(
-          titleMedium: TextStyle(color: mainTextColor),
-        ),
-        appBarTheme: AppBarTheme(
-          color: Colors.white,
-          centerTitle: true,
-          foregroundColor: mainTextColor,
-          titleTextStyle: GoogleFonts.roboto(
-            fontWeight: FontWeight.bold,
-            color: mainTextColor,
-            fontSize: 16,
+          scaffoldBackgroundColor: Colors.white,
+          textTheme: TextTheme(
+            titleMedium: TextStyle(color: mainTextColor),
           ),
-        ),
-      ),
+          appBarTheme: AppBarTheme(
+            color: Colors.white,
+            centerTitle: true,
+            foregroundColor: mainTextColor,
+            titleTextStyle: GoogleFonts.roboto(
+              fontWeight: FontWeight.bold,
+              color: mainTextColor,
+              fontSize: 16,
+            ),
+          ),
+          elevatedButtonTheme: ElevatedButtonThemeData(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: const Color(0xFFF4F6F6),
+              foregroundColor: hintTextColor,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16.0),
+              ),
+            ),
+          )),
       debugShowCheckedModeBanner: false,
-      home: const MainNavigationView(),
+      home: const CartView(),
     );
   }
 }

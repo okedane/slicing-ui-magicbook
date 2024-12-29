@@ -10,7 +10,15 @@ class EditProfileView extends StatefulWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Edit Profile"),
-        actions: const [],
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              Icons.more_horiz,
+              size: 24.0,
+            ),
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -20,7 +28,7 @@ class EditProfileView extends StatefulWidget {
             children: [
               CircleAvatar(
                 radius: 64,
-                backgroundImage: NetworkImage(
+                backgroundImage: const NetworkImage(
                   "https://res.cloudinary.com/dotz74j1p/raw/upload/v1716044979/nr7gt66alfhmu9vaxu2u.png",
                 ),
                 child: Stack(
@@ -39,8 +47,27 @@ class EditProfileView extends StatefulWidget {
                   ],
                 ),
               ),
+              const SizedBox(
+                height: 35.0,
+              ),
+              const QTextfild(hintText: "Full Name"),
+              const SizedBox(
+                height: 10.0,
+              ),
+              const QTextfild(hintText: "Email"),
+              const SizedBox(
+                height: 10.0,
+              ),
+              const QTextfild(hintText: "Date of birth")
             ],
           ),
+        ),
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: QButton(
+          label: "Update",
+          onPressed: () => Get.back(),
         ),
       ),
     );

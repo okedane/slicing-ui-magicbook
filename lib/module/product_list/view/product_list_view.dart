@@ -47,13 +47,6 @@ class ProductListView extends StatefulWidget {
                     child: SizedBox(
                       height: 42,
                       child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color(0xFFF4F6F6),
-                          foregroundColor: hintTextColor,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(16.0),
-                          ),
-                        ),
                         onPressed: () {},
                         child: Row(
                           children: [
@@ -82,13 +75,6 @@ class ProductListView extends StatefulWidget {
                     child: SizedBox(
                       height: 42,
                       child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color(0xFFF4F6F6),
-                          foregroundColor: hintTextColor,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(16.0),
-                          ),
-                        ),
                         onPressed: () {},
                         child: Row(
                           children: [
@@ -173,35 +159,36 @@ class ProductListView extends StatefulWidget {
                           ),
                         ),
                         SizedBox(
-                            width: MediaQuery.of(context).size.width,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
-                                Text(
-                                  item["product_name"],
-                                  style: const TextStyle(
-                                    fontSize: 16.0,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white,
-                                  ),
+                          width: MediaQuery.of(context).size.width,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              Text(
+                                item["product_name"],
+                                style: const TextStyle(
+                                  fontSize: 16.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
                                 ),
-                                Text(
-                                  item["category"],
-                                  style: const TextStyle(
-                                    fontSize: 12.0,
-                                    color: Colors.white,
-                                  ),
+                              ),
+                              Text(
+                                item["category"],
+                                style: const TextStyle(
+                                  fontSize: 12.0,
+                                  color: Colors.white,
                                 ),
-                                Text(
-                                  "\$${item["price"]}",
-                                  style: const TextStyle(
-                                    fontSize: 16.0,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white,
-                                  ),
+                              ),
+                              Text(
+                                "\$${item["price"]}",
+                                style: const TextStyle(
+                                  fontSize: 16.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
                                 ),
-                              ],
-                            ))
+                              ),
+                            ],
+                          ),
+                        )
                       ],
                     ),
                   );
