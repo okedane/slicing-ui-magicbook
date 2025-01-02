@@ -235,7 +235,7 @@ class DashboardView extends StatefulWidget {
                                         backgroundColor: Colors.white,
                                         child: Icon(
                                           Icons.favorite,
-                                          color: Colors.red,
+                                          color: Colors.grey,
                                           size: 16.0,
                                         ),
                                       ),
