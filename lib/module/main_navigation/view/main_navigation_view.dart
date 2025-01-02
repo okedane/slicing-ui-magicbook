@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:magic_book/core.dart';
-import '../controller/main_navigation_controller.dart';
 
 class MainNavigationView extends StatefulWidget {
   const MainNavigationView({super.key});
@@ -19,9 +18,7 @@ class MainNavigationView extends StatefulWidget {
           index: controller.selectedIndex,
           children: [
             const DashboardView(),
-            Container(
-              color: Colors.green,
-            ),
+            const OrderListView(),
             Container(
               color: Colors.blue,
             ),

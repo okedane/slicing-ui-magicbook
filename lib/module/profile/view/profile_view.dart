@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:magic_book/core.dart';
-import 'package:magic_book/core/widgets/listtile/listtile.dart';
-import '../controller/profile_controller.dart';
 
 class ProfileView extends StatefulWidget {
   const ProfileView({super.key});
@@ -41,7 +39,7 @@ class ProfileView extends StatefulWidget {
               ),
               const ListTile(
                 contentPadding: EdgeInsets.zero,
-                title: Text("OTHER INFORMATION"),
+                title: Text("Other Information"),
               ),
               //bisa mengunakan ListView
               for (var item in controller.menuItem)

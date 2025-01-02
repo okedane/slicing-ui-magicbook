@@ -2,7 +2,7 @@
 We believe, the class name must be unique. 
 If there is a conflicting class name in this file,
 it means you have to rename it to something more unique.
-fileCount: 36
+fileCount: 42
 */
 export 'package:magic_book/core/theme/theme_config.dart';
 export 'package:magic_book/core/widgets/buttom/button.dart';
@@ -29,6 +29,12 @@ export 'package:magic_book/module/login/controller/login_controller.dart';
 export 'package:magic_book/module/login/view/login_view.dart';
 export 'package:magic_book/module/main_navigation/controller/main_navigation_controller.dart';
 export 'package:magic_book/module/main_navigation/view/main_navigation_view.dart';
+export 'package:magic_book/module/order_detail/controller/order_detail_controller.dart';
+export 'package:magic_book/module/order_detail/state/order_detail_state.dart';
+export 'package:magic_book/module/order_detail/view/order_detail_view.dart';
+export 'package:magic_book/module/order_list/controller/order_list_controller.dart';
+export 'package:magic_book/module/order_list/state/order_list_state.dart';
+export 'package:magic_book/module/order_list/view/order_list_view.dart';
 export 'package:magic_book/module/product_detail/controller/product_detail_controller.dart';
 export 'package:magic_book/module/product_detail/view/product_detail_view.dart';
 export 'package:magic_book/module/product_list/controller/product_list_controller.dart';

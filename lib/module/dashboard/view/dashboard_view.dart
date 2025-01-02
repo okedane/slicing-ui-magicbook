@@ -33,7 +33,7 @@ class DashboardView extends StatefulWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: InkWell(
-              onTap: () => Get.to(CartView()),
+              onTap: () => Get.to(const CartView()),
               child: const Badge(
                 label: Text("4"),
                 child: Icon(Icons.shopping_cart),

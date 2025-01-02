@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:magic_book/core.dart';
-import '../controller/change_password_controller.dart';
 
 class ChangePasswordView extends StatefulWidget {
   const ChangePasswordView({super.key});

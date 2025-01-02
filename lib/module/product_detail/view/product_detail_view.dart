@@ -6,7 +6,7 @@ import '../controller/product_detail_controller.dart';
 
 class ProductDetailView extends StatefulWidget {
   final Map item;
-  ProductDetailView({
+  const ProductDetailView({
     required this.item,
     super.key,
   });
@@ -62,7 +62,7 @@ class ProductDetailView extends StatefulWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.all(20.0),
+              padding: const EdgeInsets.all(20.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

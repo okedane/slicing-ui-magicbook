@@ -169,7 +169,7 @@ class CartView extends StatefulWidget {
         ),
         child: Wrap(
           children: [
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width,
               child: Row(
                 children: [

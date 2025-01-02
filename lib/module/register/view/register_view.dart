@@ -1,11 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:magic_book/core.dart';
-import 'package:magic_book/core/theme/theme_config.dart';
-import 'package:magic_book/core/widgets/buttom/button.dart';
-import 'package:magic_book/core/widgets/textfield/textfild.dart';
-import 'package:magic_book/state_util.dart';
-import '../controller/register_controller.dart';
 
 class RegisterView extends StatefulWidget {
   const RegisterView({super.key});

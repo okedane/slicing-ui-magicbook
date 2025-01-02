@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:magic_book/core.dart';
-import 'package:magic_book/core/widgets/buttom/button.dart';
-import 'package:magic_book/core/widgets/textfield/textfild.dart';
-import '../controller/forgot_password_controller.dart';
 
 class ForgotPasswordView extends StatefulWidget {
   const ForgotPasswordView({super.key});

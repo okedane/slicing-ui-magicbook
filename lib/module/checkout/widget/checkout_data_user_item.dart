@@ -30,7 +30,7 @@ class checkoutDataUsersItem extends StatelessWidget {
           if (subtitle2 != null) Text(subtitle2!),
         ],
       ),
-      trailing: Icon(Icons.chevron_right),
+      trailing: const Icon(Icons.chevron_right),
     );
   }
 }

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:magic_book/core.dart';
-import '../controller/edit_profile_controller.dart';
 
 class EditProfileView extends StatefulWidget {
   const EditProfileView({super.key});

@@ -1,7 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:magic_book/core.dart';
-import 'package:magic_book/core/widgets/buttom/button.dart';
 
 class IntroView extends StatefulWidget {
   const IntroView({super.key});

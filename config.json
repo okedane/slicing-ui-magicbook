@@ -15,7 +15,8 @@
         "cart",
         "checkout",
         "order_list",
-        "order_checout"
+        "order_checout",
+        "detail_keindahan"
     ],
     "clean_architecture": false,
     "services": [],

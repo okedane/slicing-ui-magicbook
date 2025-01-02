@@ -1,6 +1,4 @@
 import 'package:google_fonts/google_fonts.dart';
-import 'package:magic_book/state_util.dart';
-import 'package:magic_book/core/theme/theme_config.dart';
 import 'package:magic_book/core.dart';
 import 'package:flutter/material.dart';
 
@@ -41,7 +39,7 @@ class MyApp extends StatelessWidget {
             ),
           )),
       debugShowCheckedModeBanner: false,
-      home: const SplashView(),
+      home: const MainNavigationView(),
     );
   }
 }

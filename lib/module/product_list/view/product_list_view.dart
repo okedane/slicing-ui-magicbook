@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:magic_book/core.dart';
-import '../controller/product_list_controller.dart';
 
 class ProductListView extends StatefulWidget {
   const ProductListView({super.key});

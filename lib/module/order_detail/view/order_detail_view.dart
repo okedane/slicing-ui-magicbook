@@ -1,15 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:magic_book/core.dart';
 
-class CheckoutView extends StatefulWidget {
-  const CheckoutView({super.key});
+class OrderDetailView extends StatefulWidget {
+  final Map<String, dynamic> item;
+  const OrderDetailView({
+    required this.item,
+    super.key,
+  });
 
-  Widget build(context, CheckoutController controller) {
+  Widget build(context, OrderDetailController controller) {
     controller.view = this;
-    final cartController = CartController.instance;
+    List productList = item["items"];
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Checkout"),
+        title: Text("#${item["id"]}"),
         actions: const [],
       ),
       body: SingleChildScrollView(
@@ -27,12 +32,12 @@ class CheckoutView extends StatefulWidget {
                 ),
               ),
               ListView.builder(
-                itemCount: cartController.products.length,
+                itemCount: productList.length,
                 padding: EdgeInsets.zero,
                 shrinkWrap: true,
                 physics: const ScrollPhysics(),
                 itemBuilder: (BuildContext context, int index) {
-                  var item = cartController.products[index];
+                  var item = productList[index];
                   double total = double.parse(item["price"].toString()) *
                       double.parse(item["price"].toString());
                   return ListTile(
@@ -44,13 +49,14 @@ class CheckoutView extends StatefulWidget {
                           color: Colors.grey,
                           image: DecorationImage(
                             image: NetworkImage(
-                              item['photo'],
+                              item['photo'] ??
+                                  "https://res.cloudinary.com/dotz74j1p/image/upload/v1715660683/no-image.jpg",
                             ),
                             fit: BoxFit.cover,
                           ),
                           borderRadius: BorderRadius.circular(10)),
                     ),
-                    title: Text(item["product_name"]),
+                    title: Text(item["product_name"] ?? "-"),
                     subtitle: Text(
                         "QTY : ${item['qty']}  Price : \$${item['price']}"),
                     trailing: Text("\$$total"),
@@ -116,7 +122,7 @@ class CheckoutView extends StatefulWidget {
             Container(
               height: 10,
             ),
-            QButton(label: "Checkout", onPressed: () {}),
+            QButton(label: "Print", onPressed: () {}),
           ],
         ),
       ),
@@ -124,5 +130,5 @@ class CheckoutView extends StatefulWidget {
   }
 
   @override
-  State<CheckoutView> createState() => CheckoutController();
+  State<OrderDetailView> createState() => OrderDetailController();
 }

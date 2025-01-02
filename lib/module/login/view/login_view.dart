@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:magic_book/core.dart';
-import 'package:magic_book/core/theme/theme_config.dart';
-import 'package:magic_book/core/widgets/buttom/button.dart';
-import 'package:magic_book/state_util.dart';
-import '../controller/login_controller.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LoginView extends StatefulWidget {
